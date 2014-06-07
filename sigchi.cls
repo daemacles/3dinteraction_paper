@@ -61,9 +61,9 @@
 %
 % ---- End of 'updates' ----
 %
-\def\fileversion{V0.18}            % [jdf] for ACM's tracking purposes 
+\def\fileversion{V0.18}            % [jdf] for ACM's tracking purposes
 \def\filedate{August, 28, 2011}    % [jdf] tracking data
-\def\docdate {Thursday, August 28th 2011} % [jdf] 
+\def\docdate {Thursday, August 28th 2011} % [jdf]
 \usepackage{epsfig}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -577,7 +577,7 @@
   \hrule width .4\columnwidth
   \kern 2.6\p@}                 % The \hrule has default height of .4pt .
 % ------
-\long\def\@makefntext#1{\noindent 
+\long\def\@makefntext#1{\noindent
 %\hbox to .5em{\hss$^{\@thefnmark}$}#1}   % original
 \hbox to .5em{\hss\textsuperscript{\@thefnmark}}#1}  % C. Clifton / GM Oct. 2nd. 2002
 % -------
@@ -601,14 +601,14 @@
 
 % According to the CHI specifications, captions should be centered.
 % This looks kind of bad for multi-line captions, so I only center
-% 1-line captions.  
+% 1-line captions.
 \long\def\@makecaption#1#2{
   \vskip 2pt % \baselineskip
   \setbox\@tempboxa\hbox{\small
 \textbf{#1. #2}} % DLC
   \ifdim \wd\@tempboxa >\hsize % IF longer than one line:
      \small\textbf{#1. #2}\par     %   THEN set as ordinary paragraph.
-    \else                      %   ELSE  center. 
+    \else                      %   ELSE  center.
      \hbox to\hsize{\hfil\box\@tempboxa\hfil}\par
   \fi}
 
@@ -904,7 +904,7 @@
 \def\@category#1#2#3[#4]{%
     \begingroup
         \let\and\relax
-%            #1 [\textbf{#2}]% 
+%            #1 [\textbf{#2}]%
             #1 #2%   % DLC
             \if!#4!%
                 \if!#3!\else : #3\fi
@@ -1519,31 +1519,24 @@
 \newtoks\copyrightetc
 \global\copyrightetc{\ } %  Need to have 'something' so that adequate space is left for pasting in a line if "confinfo" is supplied.
 
-\toappear{
-Paste the appropriate copyright statement here. ACM now supports three different copyright statements:\\
-$\bullet$ ACM copyright: ACM holds the copyright on the work. This is the historical approach.\\
-$\bullet$ License: The author(s) retain copyright, but ACM receives an exclusive publication license.\\
-$\bullet$ Open Access: The author(s) wish to pay for the work to be open access. The additional fee must be paid to ACM.\\
-This text field is large enough to hold the appropriate release statement assuming it is single spaced. 
-}
-\clubpenalty=10000 
+\clubpenalty=10000
 \widowpenalty = 10000
-% End of sigchi.cls - version 0.01	
+% End of sigchi.cls - version 0.01
 
 
 %% DanCo, 10/19/11: Added this to reduce overfull lines per Sheridan
 %% request; it leads to occasionally unpleasant extra whitespace,
-%% though actually no worse and perhaps better than the 
+%% though actually no worse and perhaps better than the
 %% default Word template.
 %%
 %% This can be manually controlled instead by authors in text
-%% by putting \sloppy before and \fussy immediately 
+%% by putting \sloppy before and \fussy immediately
 %% after troublesome paras.  Idea found at
 %% http://www.economics.utoronto.ca/osborne/latex/PMAKEUP.HTM
 
 \sloppy
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "survey"
-%%% End: 
+%%% End:
