@@ -1,3 +1,66 @@
 \section{Related Work}\label{sec:related}
+Mixed reality systems often focus on the human hand for natural interaction.
+Although several 3D manipulation systems use direct mappings between hand
+position and a virtual hand, such as \cite{poupyrev1996go},
+comparatively few aim to make the perceived 3D position of the hand proxy be
+coincident with the user's natural perception of their
+hand location. The relevant perceptual phenomenon, known as {\bf
+proprioception}, is a person's automatic knowledge of the position and
+orientation of their
+limbs relative to themselves. The use of proprioception in 3D interfaces was
+investigated by Mine in \cite{mine1997exploiting}, which found that
+in an immersive virtual environment, manipulating objects colocated with the
+users hand was more efficient than manipulation at an offset. Several systems,
+such as \cite{mulder2002personal, prachyabrued2011dropping}, use a two-layered
+tabletop with a mirrored display above a physical table; in these systems the
+interaction space, underneath
+the display and above the table, is directly mapped to what the user sees in the
+display. The aforementioned systems are strictly virtual reality systems, since
+the actual environments displayed
+are still completely synthesized. Recent work by Microsoft Research, the
+Holodesk \cite{holodesk}, has instead used half-silvered mirrors to create an
+augmented reality
+interaction space, where the user can see their hands interacting in the same
+world as virtual objects. Holodesk focused on realistic physical interactions
+within the space,
+representing real objects as point clouds that can knock over or hold up other
+objects.
 
-Text.
+Several works have investigated the effectiveness of novel, high-DOF input
+devices for 3D tasks by directly comparing them to traditional devices,
+especially the mouse.
+Evaluation methods generally involve performing fundamental 3D tasks, especially
+selection, placement, and rotation. Input methods are compared based on their
+speed and accuracy. The SpaceNavigator, a commercially available high DOF
+device, was found to be inferior to the mouse for placement tasks in
+\cite{mattheiss2011navigating}. B{\'e}rard et al.\ also found the mouse to be more
+effective than several high-DOF devices for placement tasks
+in \cite{study1}.  However, a later study by the same group found that enhanced
+visual feedback, in the form of pop-up depth views, greatly enhanced the
+effectiveness
+of the high-DOF device, and was found to perform better than the mouse
+\cite{study2}. Schultheis et al.\ find the mouse inferior to high DOF input devices
+for a docking task consisting of achieving a target placement and orientation
+\cite{schultheis2012comparison}.
+
+There have also been works examining the effects of depth cues on 3D task
+performance. Wanger et al.\ examine 2D renderable depth-cues, such as shadows,
+background textures, and motion cues, in \cite{wanger1992perceiving}. Boritz and
+Booth compare monoscopic and stereoscopic displays, as well as viewpoint
+tracking, with subjects using a 6-DOF input device, finding stereoscopic
+displays to be superior to monoscopic displays \cite{boritz1997study}. In
+contrast, Schultheis et al.\ found no significant
+difference between monoscopic and stereoscopic outputs
+\cite{schultheis2012comparison}. The evaluation of the Holodesk
+system also involved
+a user study, in which they compared performance on a selection task with varying
+depth cues. This study
+focused on the effectiveness of aligning the location of physical objects in the tabletop
+space with the apparent locations of virtual objects. They found that aligned
+stereoscopic display systems were better than aligned non-stereoscopic systems
+with appropriate occlusion cues, and unaligned displays resulted in the slowest
+performance \cite{holodesk}. As far as we are aware, only Schultheis et al.\ have
+simultaneously varied 3D input and output modalities; however they did not
+examine direct colocation of input and output spaces as Holodesk did
+\cite{schultheis2012comparison}.
+

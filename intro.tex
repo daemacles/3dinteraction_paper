@@ -1,3 +1,42 @@
 \section{Introduction}\label{sec:intro}
+Humans operate in a world of three spatial dimensions, and have developed a
+corresponding intuition on interacting with physical objects.
+If we see a coffee mug on a table, we can reach out and grab the mug with
+absolute confidence in where our hand is going
+Unfortunately, when dealing with virtual 3D data, most of this intuition is
+lost. Computer-aided design systems and 3D modelling software present 3D scenes
+on 2D screens and require the use of a keyboard and inherently
+2-degree-of-freedom mouse to perform such complicated tasks as selection,
+rotation, and viewpoint control. This results in complicated, unintuitive
+workflows; for example, the standard method to move an object in a virtual scene
+is to decompose a translation into several planar movements, usually aided by
+orthogonal projections (front view, side view, top view). In this paper we
+investigate methods to make interacting with virtual 3D data as fluid and
+natural as interacting with the physical world.
 
-Text. \cite{referencelabel}
+We focus our efforts on examining the input and output devices that are
+currently used in 3D user interfaces. Several existing systems have already
+attempted to make use of physical intuition by developing high degree-of-freedom
+input devices to interact with 3D information \cite{manders2010gesture,
+mattheiss2011navigating,mine1997moving}, or depth cues such as
+stereoscopy or parallax \cite{boritz1997study, schultheis2012comparison}.
+Many of these works include studies showing the superiority (or inferiority)
+of the system compared with traditional mouse-and-keyboard systems.
+
+However, these studies focus on only half of the factors relevant for intuition;
+visual feedback is rarely adapted to react seamlessly with the input device.
+Instead, natural input devices are used to manipulate an onscreen object, which
+is very different from intuitively reaching out to the object. In our coffee
+mug example, we have to manipulate the mug at the end of a long stick. We
+believe that by colocating the 3D interaction space with a 3D display space
+with appropriate depth cues, we can recover the intuitive feeling of interacting
+with a physical object. Imagine that your mug, physically located on the table
+on the other side of the room, was virtually rendered directly in front of you;
+you can once again reach out and "grab" it intuitively, as if it was real.
+
+In this paper, we present the results of a preliminary study investigating the
+effects of both input and output methods on performance in a 3D point selection
+task. Specifically, we compare the standard 2D monitor with orthographic
+projections with a stereoscopic, head-tracked output display. We also compare a
+standard mouse and keyboard input with a 6-DOF ``3D mouse'' and a free-space
+input sensor with a 1-to-1 mapping to the virtual space.
