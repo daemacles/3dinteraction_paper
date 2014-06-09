@@ -658,7 +658,8 @@
  \let\maketitle\relax
  \let\@maketitle\relax
  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\gdef\@subtitle{}\let\thanks\relax
- \@copyrightspace} % JRB 2008-08-13 this line was commented out for some reason
+ %\@copyrightspace
+ } % JRB 2008-08-13 this line was commented out for some reason
                    % which meant that the copyright space wasn't reserved.
                    % I re-enabled it.
 
@@ -923,22 +924,22 @@
 %%% displacement to offset the space allocated for a non-existent
 %%% caption).
 %%%
-\newtoks\copyrightnotice
-\newcounter{copyrightbox} % llt: enable compatibility with the caption package
-\def\ftype@copyrightbox{8}
-\def\@copyrightspace{
-\@float{copyrightbox}[b]
-\begin{center}
-\setlength{\unitlength}{1pc}
-\begin{picture}(20,6) %Space for copyright notice
-\put(0,-0.95){\crnotice{\@toappear}}
-\end{picture}
-\end{center}
-\end@float}
+%\newtoks\copyrightnotice
+%\newcounter{copyrightbox} % llt: enable compatibility with the caption package
+%\def\ftype@copyrightbox{8}
+%\def\@copyrightspace{
+%\@float{copyrightbox}[b]
+%\begin{center}
+%\setlength{\unitlength}{1pc}
+%\begin{picture}(20,6) %Space for copyright notice
+%\put(0,-0.95){\crnotice{\@toappear}}
+%\end{picture}
+%\end{center}
+%\end@float}
 
-\def\@toappear{} % Default setting blank - commands below change this.
-\long\def\toappear#1{\def\@toappear{\parbox[b]{20pc}{\scriptsize\baselineskip 8pt#1}}}
-\def\toappearbox#1{\def\@toappear{\raisebox{5pt}{\framebox[20pc]{\parbox[b]{19pc}{#1}}}}}
+%\def\@toappear{} % Default setting blank - commands below change this.
+%\long\def\toappear#1{\def\@toappear{\parbox[b]{20pc}{\scriptsize\baselineskip 8pt#1}}}
+%\def\toappearbox#1{\def\@toappear{\raisebox{5pt}{\framebox[20pc]{\parbox[b]{19pc}{#1}}}}}
 
 \newtoks\conf
 \newtoks\confinfo
