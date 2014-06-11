@@ -65,6 +65,7 @@ movement and 3D translation.
 
 Fortunately the mouse is already a point-and-click device, so we reuse the
 left mouse button as our {\it click} input.
+
 \subsubsection{Razor Hydra (3D Relative Interface)}
 We implement the 3D relative interface using the Razer Hydra. We reuse the
 conceptual model of the mouse with this interface, where the movement of the
@@ -88,14 +89,13 @@ was ill-suited as a registered absolute input interface.
 \subsubsection{Leap Motion (3D Absolute Interface)}
 We implement the 3D absolute interface using the Leap Motion. The device uses
 infrared light using a proprietary method to model the spatial positions of
-human hands. We chose to use the Leap instead of more common
-RGBD cameras because of its compatible operating range, low latency and high
-data rates.
+human hands. We chose to use the Leap instead of more common RGBD cameras
+because of its compatible operating range, low latency and high data rates.
 
 The precision of the Leap allows us to track a fingertip as the cursor
 position.  We sense cursor movement only when a single finger on a hand is
 extended. The primary reason is to provide a simple reset mechanism if the
-Leap mistracks the finger. We use the keyboard spacebar as the {\it click}
+Leap mistracks the finger.  We use the keyboard spacebar as the {\it click}
 interaction, since hand-only gestures are often noisy with the Leap or
 interfere with precise 3D placement.
 
