@@ -1,4 +1,4 @@
-\section{Discussion}\label{sec:discussion}
+\section{Discussion and Future Work}\label{sec:discussion}
 
 Given the uniform distribution over prior 3D experience, we feel that our
 results generalize at least to anyone with familiarity with computers.
@@ -11,6 +11,66 @@ i.e. basically within arms reach, as our study did.
 
 1-to-1 mapping as we implemented it requires a lot of setup (calibration process) and once done the components can't be moved.  This limits its ease of adoption in informal settings / at home / on laptops with 3d displays.
 
-\subsection{User Feedback}
+\subsection{User Feedback}\label{sec:feedback}
 
-From the post-experiment questionnaire...
+An important aspect of this experiment was to gather user feedback about their
+impressions in using each modality; the most efficient interaction modality is
+useless to implement if users dislike using it.  Feedback is also used to
+suggest improvements to our system for future, larger scale testing.
+
+On the whole, user feedback about our test system was very positive.  There
+was very much a sense of the Wow! factor when using the full 3D systems,
+despite its virtual wack-a-mole aspect, and several subjects commented that it
+was fun in and of itself.
+
+In the 3D output mode, subjects vastly preferred using the Hydra to the Leap
+or mouse, even though the majority found the Leap to be the most intuitive
+input, see \figref{fig:post}.  Based on their comments this is mainly due to
+two factors: first, the Leap can be frustrating to use due to its imperfect
+tracking (i.e. it either works well or horribly, no middle ground), and
+second, that shoulder fatigure rapidly sets in, limiting the time for
+comfortable interaction.  Another stated benefit of the Hydra was that its
+relative motion allowed a user to reposition her hand without interrupting the
+state of the workflow.
+
+\begin{itemize}
+\item ``[The Hydra] felt the most intuitive, and felt like it has the most
+  potential for me to increase speed/precision over use.  The leap motion with
+  3D viewing was a close second, but the fact that \emph{my hand occludes the
+  display} during use was not too comfortable.''
+\item ``Because [the Hydra] provides more accurate control and doesn't require
+  too much effort to move. Leap motion is a pain for both cases, because it is
+  always out of the detection range and it requires my arm to point to a
+  precise location that is more tiring.''
+\item ``The 3D headtracked monitor helped me see how close the object was to
+  me. I liked the relative motion of the [Hydra]because it allowed me to
+  reposition my hand and keep my arm in a comfortable range of motion.''
+\end{itemize}
+
+When asked about improvements to our system, a clear consensus was replacing the Leap with something more reliable.  Other suggested improvements involve the
+UI design (include more graphical cues such as axes or cursor location
+indicators) and improved 3D realism such as shading and shadows that
+correspond with the physical environment.
+
+\begin{figure}
+    \centering
+    \begin{tabular}{c | c | c}
+    Favorite Combination & 2D & 3D \\ \hline
+    Mouse and Keyboard   &    & 1 \\
+    Hydra                &    & 9 \\
+    Leap Motion          &    & 1 \\
+    \end{tabular}
+
+    \vspace{0.2in}
+
+    \begin{tabular}{c | c | c}
+    Most Intuitive     & 2D & 3D \\ \hline
+    Mouse and Keyboard &    &  \\
+    Hydra              &    & 4 \\
+    Leap Motion        &    & 7 \\
+    \end{tabular}
+
+    \caption{Post-experiment responses}
+    \label{fig:post}
+\end{figure}
+
