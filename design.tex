@@ -11,7 +11,7 @@ The goal with our input device selection and interface design was to isolate
 the characteristics of the input method to be applicable to many types of
 device.  Thus our conclusions using the Leap Motion should be transferable to
 any in-air, free-hand input mechanism, our conclusions with the mouse should
-be applicable to the trackball, and so on.
+be applicable to the trackpad, and so on.
 
 While our original inspiration was to compare standard mouse and keyboard
 interfaces with 1-to-1 free space interfaces, we recognized that other devices
@@ -66,8 +66,17 @@ movement and 3D translation.
 Fortunately the mouse is already a point-and-click device, so we reuse the
 left mouse button as our {\it click} input.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{input.png}
+    \caption{Input Devices: Left: Razer Hydra. Right: Leap Motion. Device sizes
+        not to scale.}
+    \label{fig:input}
+\end{figure}
+
 \subsubsection{Razor Hydra (3D Relative Interface)}
-We implement the 3D relative interface using the Razer Hydra. We reuse the
+We implement the 3D relative interface using the Razer Hydra
+(\figref{fig:input}). We reuse the
 conceptual model of the mouse with this interface, where the movement of the
 device has a direct but not 1-to-1 mapping with the movement of a cursor (hence
 relative interface). Therefore, we also refer to the Hydra interface as the 3D
@@ -87,10 +96,12 @@ magnetic fields such as those produced by large electronics; this meant that it
 was ill-suited as a registered absolute input interface.
 
 \subsubsection{Leap Motion (3D Absolute Interface)}
-We implement the 3D absolute interface using the Leap Motion. The device uses
+We implement the 3D absolute interface using the Leap Motion
+(\figref{fig:input}). The device uses
 infrared light using a proprietary method to model the spatial positions of
-human hands. We chose to use the Leap instead of more common RGBD cameras
-because of its compatible operating range, low latency and high data rates.
+human hands. We chose to use the Leap instead of more common
+RGBD cameras because of its compatible operating range, low latency and high
+data rates.
 
 The precision of the Leap allows us to track a fingertip as the cursor
 position.  We sense cursor movement only when a single finger on a hand is
@@ -123,19 +134,31 @@ depending on whether the clutch was enabled (and the cursor tracked). This
 primarily helped the Leap input interface, which would sometimes lose track of
 the user's hand.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{displays.png}
+    \caption{Output modalities: {\bf Left}: 2D split-screen output. {\bf Right}:
+    3D stereoscopic output. Note the apparent doubling of objects on screen;
+when wearing shutter glasses each eye will see one of the images.}
+    \label{fig:output}
+\end{figure}
+
 \subsubsection{2D Display}
 As described above, we use the split-screen orthographic projections commonly
 used in 3D modelling software. This consisted of a perspective projection on
 the top right, a top view on the top left, a front view on the lower left, and
-a side view on the lower right. We expect that most users would focus on the
-left two displays when using the mouse input, since those correspond directly
-with the planes that the mouse moves in.
+a side view on the lower right (see \figref{fig:output}). We expect that most
+users would focus on the left two displays when using the mouse input, since
+those correspond directly with the planes that the mouse moves in.
 
 \subsubsection{3D Stereoscopic Display and Headtracking}
 To achieve stereoscopic rendering, we used Nvidia's 3D Vision Automatic
 technology \cite{nvidia3dvision}. The hardware we used was an Nvidia GTX580
 graphics card, an Asus VG278HE monitor, and a set of wired Nvidia 3D Vision
-glasses. While the technology did not permit full control of rendering in each
+glasses. The 3D vision monitor displayed images at 120Hz, while the shutter
+glasses alternately blocked each eye in a synchronized fashion so that alternate
+frames were seen by the left and right eyes (see \figref{fig:output}). While
+the technology did not permit full control of rendering in each
 eye, we were able to render spatially accurate locations in front of the
 monitor given a head position and eye separation, assuming no head roll.
 
@@ -144,7 +167,7 @@ rely significantly on motion parallax as a depth cue \cite{parallax}, as well
 as expecting that percieved visual motion will match accelerations sensed by
 the inner ear.  Even while sitting ``still'' people make continous small head
 motions.  Without constantly adjusting the virtual camera from which the scene
-is redndered to match these motions, even a stereoscopic display will assume a
+is rendered to match these motions, even a stereoscopic display will assume a
 flat dimension.
 
 To perform head tracking, We used the Aruco augmented reality tracking library
