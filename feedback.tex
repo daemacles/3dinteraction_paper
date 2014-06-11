@@ -1,17 +1,4 @@
-\section{Discussion and Future Work}\label{sec:discussion}
-
-Given the uniform distribution over prior 3D experience, we feel that our
-results generalize at least to anyone with familiarity with computers.
-
-Anecdote from \cite{leewii} about how parallax is really pretty immersing,
-even if it is only approximately calibrated to head position.  Also the fact
-that human ``stereo'' vision is basically flat beyond 20 feet.  So, stereoscopic
-displays are really only useful when interacting with objects at close range,
-i.e. basically within arms reach, as our study did.
-
-1-to-1 mapping as we implemented it requires a lot of setup (calibration process) and once done the components can't be moved.  This limits its ease of adoption in informal settings / at home / on laptops with 3d displays.
-
-\subsection{User Feedback}\label{sec:feedback}
+\section{User Feedback and Future Work}\label{sec:feedback}
 
 An important aspect of this experiment was to gather user feedback about their
 impressions in using each modality; the most efficient interaction modality is
@@ -75,3 +62,13 @@ correspond with the physical environment.
     \label{fig:post}
 \end{figure}
 
+Not mentioned in the feedback, but important to note is the non-user friendly
+nature of duplicating our system.  Unfortunately, because the 1-to-1 mapping
+as we implemented it requires extensive setup (the calibration process) and a
+static environment, our current system is not suited for adoption in informal
+settings / at home / on mobile laptops with 3d displays.  Streamlining the
+setup process and developing more robust tracking and calibration procedures
+is required to take a Leap Motion / 3D display style interaction out of the
+lab and into the home.  However, if only relative inputs are used then
+calibration is much simpler because approximate solutions are good enough from
+a human perception standpoint \cite{leewii}.
